@@ -1,0 +1,178 @@
+:root{
+   --Navbar-Color: rgb(36, 13, 13);
+
+   --Button-Color : #29d9d5;
+   
+   --Body-Bg-color:White; 
+}
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+html{
+font-size: 70%;
+}
+
+body{
+   font-family: 'Poppins', sans-serif;
+   overflow-x: hidden;
+   color: white;
+}
+
+/*/////////////////////////////////////////////////////////
+////////////////// NAVBAR                     
+*/
+
+.nav{
+   display: flex;
+        align-items: center;
+        justify-content:space-around;
+        height: 10vh;
+        width: 100%;
+        background: var(--Navbar-Color);
+}
+
+.content a{
+   text-decoration: none;
+   font-size:1.6rem;
+   color: white;
+   margin: 1rem;
+   transition: .4s linear;
+   
+}
+.content a:hover{
+   color: #29d9d5;
+}
+
+
+.icon{
+   height: 100%;
+   font-size: 3rem;
+   font-weight: 700;
+   text-align: center;
+   cursor: pointer;
+}
+.icon_img{
+   height: 4rem;
+   width: 4rem;
+   transform: translateY(1rem);
+   fill: aquamarine;
+   text-align: center;
+}
+
+.btn{
+   background-color: transparent;
+   cursor: pointer;
+   color: var(--Button-Color);
+   font-size: 1.8rem;
+   padding: 1.2rem;
+   border: 2px solid  #29d9d5;
+   border-radius:3rem ;
+   transition: .3s linear;
+
+}
+
+.btn:hover{
+   color: black;
+   background-color: var(--Button-Color);
+}
+
+/*/////////////////////////////////////////////////////////////////////////
+//////////////////////////////// MAIN SECTIION*/
+
+.main{
+   padding: 3rem 7%;
+}
+
+.blog{
+   color: black;
+   background: #e5d6c3e1;
+   border-radius: 6px;
+}
+
+.heading-3{
+   padding-top: 1.5rem;
+   padding-inline: 1.5rem;
+   text-transform: capitalize;
+   font-size: 2.2rem;
+   color: rgb(21, 21, 185);
+}
+
+.para{
+   font-size: 1.4rem;
+   padding-left: 1.5rem;
+   padding-bottom: 1rem;
+}
+
+/*///////////////////////////////////////////////////////////////////
+////////////////////// GRID */
+
+.grid{
+   padding-top: 2rem;
+   display: grid;
+   grid-template-columns: 1fr 1fr 1fr;
+   column-gap: 1.5rem;
+   row-gap: 2rem;
+}
+.card{
+   position: relative;
+   cursor: pointer;
+   max-width: max-content;
+   max-height: max-content;
+   transition: .3s linear;
+
+}
+
+ .card::after{
+   content:"";
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   opacity: 0;
+   z-index: 10;
+   background-color: rgba(23, 23, 23, 0.739);
+   transition: .2s linear;
+
+} 
+
+.card img{
+   height: 25.2rem;
+   border-radius: 6px;
+}
+
+.card:hover.card::after{
+  opacity: 1;
+}
+
+/*///////////////////////////////////////////////////
+//////////////////////// FOOTER*/
+
+.footer{
+   display: flex;
+   justify-content: space-between;
+   padding-top: 1rem;
+   padding-inline: 4rem;
+   width: 100%;
+   height: 30vh;
+   background-color:black;
+}
+
+.heading-2{
+   font-size: 3rem;
+}
+
+.para{
+   font-size: 1.4rem;
+   color: rgb(123, 124, 125);
+}
+
+.para_1{
+   font-size: 1.4rem;
+   color: rgb(123, 124, 125);
+   padding-top: 2rem;
+}
